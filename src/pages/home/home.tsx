@@ -82,17 +82,6 @@ export const HomePage = () => {
               </li>
               <li className="mb-2">
                 <a
-                  href="https://eslint.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  ESLint
-                </a>{" "}
-                - Pluggable JavaScript linter
-              </li>
-              <li className="mb-2">
-                <a
                   href="https://typicode.github.io/husky/"
                   target="_blank"
                   rel="noopener noreferrer"
