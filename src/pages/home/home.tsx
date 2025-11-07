@@ -71,17 +71,6 @@ export const HomePage = () => {
               </li>
               <li className="mb-2">
                 <a
-                  href="https://prettier.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  Prettier
-                </a>{" "}
-                - Formatting code on the go
-              </li>
-              <li className="mb-2">
-                <a
                   href="https://typicode.github.io/husky/"
                   target="_blank"
                   rel="noopener noreferrer"

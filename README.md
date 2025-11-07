@@ -10,7 +10,6 @@ A modern React starter template powered by Vite 🚀
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for
   building custom designs
 - [React Router](https://reactrouter.com/) - Declarative routing for React.js
-- [Prettier](https://prettier.io/) - Formatting code on the go
 - [Husky](https://typicode.github.io/husky/) - Modern native Git hooks made easy
 - [React Compiler](https://react.dev/learn/react-compiler) - Gone are the days
   of useMemo and useCallback
