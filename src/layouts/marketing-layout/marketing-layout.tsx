@@ -1,11 +1,15 @@
+import { ComponentProps, FC } from "react";
+
 import { MarketingHeader } from "@/components";
 import { useTheme } from "@/hooks";
 import { cn } from "@/utils";
-import { ComponentProps, FC } from "react";
 
-export type IMarketingLayoutProps = ComponentProps<"div">;
+export type IMarketingLayoutProps =
+  ComponentProps<"div">;
 
-export const MarketingLayout: FC<IMarketingLayoutProps> = (props) => {
+export const MarketingLayout: FC<
+  IMarketingLayoutProps
+> = (props) => {
   const { className, children } = props;
   const { themeClass } = useTheme();
   return (
@@ -14,14 +18,21 @@ export const MarketingLayout: FC<IMarketingLayoutProps> = (props) => {
         rel="icon"
         type="image/x-icon"
         href={
-          themeClass === "light" ? "/favicon-dark.ico" : "/favicon-light.ico"
+          themeClass === "light"
+            ? "/favicon-dark.ico"
+            : "/favicon-light.ico"
         }
       />
       <div
-        className={cn("w-screen min-h-screen flex flex-col px-32", className)}
+        className={cn(
+          "w-screen min-h-screen flex flex-col px-32",
+          className,
+        )}
       >
         <MarketingHeader />
-        <main className="flex-1 mb-8">{children}</main>
+        <main className="flex-1 mb-8">
+          {children}
+        </main>
       </div>
     </>
   );

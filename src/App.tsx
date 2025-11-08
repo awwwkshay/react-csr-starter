@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
+
 import { routes } from "./pages";
 import "./i18n";
 

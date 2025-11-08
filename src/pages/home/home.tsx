@@ -1,4 +1,5 @@
-import { MarketingLayout } from "@/layouts";
+import { useTranslation } from "react-i18next";
+
 import { Counter } from "@/components";
 import {
   Card,
@@ -7,7 +8,7 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { useTranslation } from "react-i18next";
+import { MarketingLayout } from "@/layouts";
 
 export const HomePage = () => {
   const { t } = useTranslation();
@@ -34,7 +35,8 @@ export const HomePage = () => {
                 >
                   Vite
                 </a>{" "}
-                - The next generation build tool for the web
+                - The next generation build tool
+                for the web
               </li>
               <li className="mb-2">
                 <a
@@ -45,7 +47,8 @@ export const HomePage = () => {
                 >
                   React 19
                 </a>{" "}
-                - A powerful JavaScript library for building user interfaces
+                - A powerful JavaScript library
+                for building user interfaces
               </li>
               <li className="mb-2">
                 <a
@@ -56,7 +59,8 @@ export const HomePage = () => {
                 >
                   Tailwind CSS
                 </a>{" "}
-                - A utility-first CSS framework for building custom designs
+                - A utility-first CSS framework
+                for building custom designs
               </li>
               <li className="mb-2">
                 <a
@@ -67,7 +71,8 @@ export const HomePage = () => {
                 >
                   React Router
                 </a>{" "}
-                - Declarative routing for React.js
+                - Declarative routing for
+                React.js
               </li>
               <li className="mb-2">
                 <a
@@ -78,7 +83,8 @@ export const HomePage = () => {
                 >
                   Husky
                 </a>{" "}
-                - Modern native Git hooks made easy
+                - Modern native Git hooks made
+                easy
               </li>
               <li>
                 <a
@@ -89,7 +95,8 @@ export const HomePage = () => {
                 >
                   React Compiler
                 </a>{" "}
-                - Gone are the days of useMemo and useCallback
+                - Gone are the days of useMemo
+                and useCallback
               </li>
             </ul>
           </CardContent>

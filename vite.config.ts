@@ -1,16 +1,21 @@
-import { defineConfig } from "vite";
-import svgr from "vite-plugin-svgr";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+import { defineConfig, withFilter } from "vite";
+import svgr from "vite-plugin-svgr";
+
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [
-    svgr(),
+    withFilter(svgr(), {
+      load: { id: /\.svg\?react$/ },
+    }),
     tailwindcss(),
     react({
       babel: {
-        plugins: [["babel-plugin-react-compiler", {}]],
+        plugins: [
+          ["babel-plugin-react-compiler", {}],
+        ],
       },
     }),
   ],

@@ -1,6 +1,7 @@
 import { RouteObject } from "react-router";
-import { HomePage } from "./home";
+
 import { AboutPage } from "./about";
+import { HomePage } from "./home";
 import { NotFoundPage } from "./not-found";
 
 export enum RouteNames {

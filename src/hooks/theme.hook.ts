@@ -1,18 +1,32 @@
-import { useThemeStore } from "@/stores";
-import { ITheme } from "@/types";
 import { useEffect } from "react";
 
-export const useTheme = () => {
-  const { theme, themeClass, setTheme, setThemeClass } = useThemeStore();
+import { useThemeStore } from "@/stores";
+import { ITheme } from "@/types";
 
-  const htmlDocument = window.document.documentElement;
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+export const useTheme = () => {
+  const {
+    theme,
+    themeClass,
+    setTheme,
+    setThemeClass,
+  } = useThemeStore();
+
+  const htmlDocument =
+    window.document.documentElement;
+  const mediaQuery = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  );
 
   useEffect(() => {
     const updateTheme = (theme: ITheme) => {
-      htmlDocument.classList.remove("light", "dark");
+      htmlDocument.classList.remove(
+        "light",
+        "dark",
+      );
       if (theme === "system") {
-        const systemTheme = mediaQuery.matches ? "dark" : "light";
+        const systemTheme = mediaQuery.matches
+          ? "dark"
+          : "light";
         htmlDocument.classList.add(systemTheme);
         setThemeClass(systemTheme);
       } else {
@@ -28,11 +42,23 @@ export const useTheme = () => {
     const listener = () => {
       updateTheme(theme);
     };
-    mediaQuery.addEventListener("change", listener);
+    mediaQuery.addEventListener(
+      "change",
+      listener,
+    );
 
     // Cleanup
-    return () => mediaQuery.removeEventListener("change", listener);
-  }, [htmlDocument.classList, mediaQuery, setThemeClass, theme]);
+    return () =>
+      mediaQuery.removeEventListener(
+        "change",
+        listener,
+      );
+  }, [
+    htmlDocument.classList,
+    mediaQuery,
+    setThemeClass,
+    theme,
+  ]);
 
   return {
     theme,
