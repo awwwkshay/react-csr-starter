@@ -18,7 +18,7 @@ export const LanguageToggle = () => {
     useLanguageStore();
 
   useEffect(() => {
-    i18n.changeLanguage(language);
+    void i18n.changeLanguage(language);
   }, [language, i18n]);
 
   return (

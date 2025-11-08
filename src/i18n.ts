@@ -14,7 +14,7 @@ const languageFromStore: ILanguage =
     ? JSON.parse(languageStore).state.language
     : "en";
 
-i18n.use(initReactI18next).init({
+await i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: en,

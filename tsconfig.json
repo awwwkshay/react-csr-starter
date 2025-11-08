@@ -24,10 +24,8 @@
     "noUncheckedSideEffectImports": true,
 
     /* Custom */
-    "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   }
 }
